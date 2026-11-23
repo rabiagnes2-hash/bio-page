@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,114 +13,81 @@
 
 <body>
 
+    <!-- SKIP LINK -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <!-- NAVIGATION BAR -->
     <nav class="navbar">
+
         <span class="logo">RABI.A</span>
 
-        <div class="logo">
+        <div>
             <a href="index.html" class="nav-link">Home</a>
             <a href="About.html" class="nav-link">About</a>
             <a href="Project.html" class="nav-link">Projects</a>
             <a href="Contact.html" class="nav-link active">Contact</a>
         </div>
+
     </nav>
 
+    <!-- MAIN CONTENT -->
+    <main id="main">
 
-    <!-- CONTACT INFORMATION -->
-    <h2>Contact</h2>
+        <h1>Contact Me</h1>
 
-    <p>Contact Information</p>
-    <p>+27 638 868 8323</p>
+        <!-- CONTACT INFORMATION -->
+        <section class="contact-info">
 
-    <h2>Email Address</h2>
-    <p>Email: Fifiieyrabi82@gmail.com</p>
+            <h2>Contact</h2>
 
-    <h2>Location</h2>
-    <p>224c President Mbeki Dr</p>
+            <p>Contact Information</p>
+            <p>+27 638 868 8323</p>
 
+            <h2>Email Address</h2>
+            <p>Email: Fifiieyrabi82@gmail.com</p>
 
-    <!-- CONTACT FORM -->
-    <section id="contact">
+            <h2>Location</h2>
+            <p>224c President Mbeki Dr</p>
 
-        <h2>Contact Me</h2>
+        </section>
 
-        <form id="contactForm">
+        <!-- CONTACT FORM -->
+        <section>
 
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name"
-                   required minlength="2">
+            <h2>Send Me a Message</h2>
 
+            <form id="contactForm">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email"
-                   required placeholder="you@example.com">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="topic">Topic</label>
-            <select id="topic" name="topic">
-                <option value="general">General question</option>
-                <option value="project">Project idea</option>
-                <option value="feedback">Feedback</option>
-            </select>
+                <label for="topic">Topic:</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Select a topic</option>
+                    <option value="general">General</option>
+                    <option value="project">Project</option>
+                    <option value="feedback">Feedback</option>
+                </select>
 
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-            <!-- PHONE NUMBER -->
-            <label for="phone">Phone Number</label>
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                pattern="[0-9-]+"
-                placeholder="Example: 071-234-5678"
-            >
+                <button type="submit">Send Message</button>
 
+            </form>
 
-            <!-- MESSAGE AND CHARACTER COUNTER -->
-            <label for="message">Message</label>
+        </section>
 
-            <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-            ></textarea>
+    </main>
 
-            <p id="charCount">Characters: 0</p>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 RABI.A. All rights reserved.</p>
+    </footer>
 
-
-            <!-- PREFERRED REPLY -->
-            <fieldset>
-                <legend>Preferred Reply</legend>
-
-                <label>
-                    <input type="radio" name="reply" value="email">
-                    Email
-                </label>
-
-                <label>
-                    <input type="radio" name="reply" value="phone">
-                    Phone
-                </label>
-            </fieldset>
-
-
-            <!-- CHECKBOX -->
-            <label>
-                <input type="checkbox" name="copy" value="yes">
-                Send me a copy of this message
-            </label>
-
-
-            <button type="submit">Send</button>
-
-        </form>
-
-        <p id="formMessage" role="status"></p>
-
-    </section>
-
-
-    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
