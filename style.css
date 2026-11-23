@@ -64,7 +64,7 @@ h2 {
 }
 
 .nav-link.active {
-    border-bottom: 3px solid #9E1B32;
+    border-bottom: none;
 }
 
 
@@ -91,7 +91,7 @@ h2 {
     max-width: 800px;
     margin: 30px auto;
     padding: 25px;
-    background-color: #930580;
+    background-color: transparent;
     color: #ffffff;
     border-radius: 8px;
 }
@@ -105,16 +105,16 @@ h2 {
     color: #36454F;
 }
 
+.about-content p {
+    color: #041123;
+}
+
 
 /* PARAGRAPHS */
 
 p {
     font-size: 18px;
     line-height: 1.6;
-}
-
-.about-content p {
-    color: #041123;
 }
 
 
@@ -145,6 +145,22 @@ p {
 }
 
 
+/* PROJECT FILTER BUTTONS */
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-buttons button {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+
 /* CONTACT FORM */
 
 #contactForm {
@@ -171,7 +187,9 @@ p {
 #contactForm input:focus-visible,
 #contactForm select:focus-visible,
 #contactForm textarea:focus-visible,
-#contactForm button:focus-visible {
+#contactForm button:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
     outline: 3px solid #9E1B32;
     outline-offset: 3px;
 }
@@ -236,20 +254,28 @@ p {
 @media (max-width: 600px) {
 
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
     }
 
     .nav-links {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         width: 100%;
+        gap: 6px;
     }
 
     .nav-link {
-        display: inline-block;
-        padding: 12px 16px;
-        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 14px;
+        min-height: 48px;
+        width: auto;
     }
 
     .project-card:first-child {
@@ -262,6 +288,21 @@ p {
 
     p {
         font-size: 16px;
+    }
+
+    button,
+    .btn {
+        min-height: 48px;
+        padding: 12px 16px;
+    }
+
+    #contactForm input,
+    #contactForm select {
+        min-height: 48px;
+    }
+
+    #contactForm textarea {
+        min-height: 100px;
     }
 }
 
@@ -332,4 +373,70 @@ body.dark-mode .intro {
 
 .contact-info p {
     text-align: center;
+}
+
+
+/* SEND ME A MESSAGE SECTION */
+
+.message-section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.message-section h2 {
+    text-align: center;
+}
+
+
+/* CENTRE THE CONTACT FORM */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 16px;
+    gap: 10px;
+}
+
+#contactForm label {
+    width: 100%;
+    text-align: center;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+    width: 100%;
+    text-align: center;
+}
+
+#contactForm button {
+    width: 100%;
+    min-height: 48px;
+    text-align: center;
+}
+
+
+/* VISIT MY PRACTICE LINK - TOUCH TARGET FIX */
+
+main > a[href="#"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 16px;
+    margin: 8px 0;
+}
+
+
+/* ACCESSIBLE TOUCH TARGETS */
+
+#darkModeBtn {
+    min-height: 48px;
+    padding: 12px 16px;
 }
